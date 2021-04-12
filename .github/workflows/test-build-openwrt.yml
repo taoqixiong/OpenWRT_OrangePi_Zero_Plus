@@ -133,7 +133,7 @@ jobs:
 
     - name: 发送编译日志文件到 Telegram
       uses: appleboy/telegram-action@master
-      if: !cancelled()
+      if: (!cancelled())
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
